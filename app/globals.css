@@ -1,0 +1,90 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Variáveis globais */
+:root {
+  --container-padding: 15px;
+
+  /* Telas (screens) */
+  --screen-sm: 640px;
+  --screen-md: 768px;
+  --screen-lg: 960px;
+  --screen-xl: 1200px;
+
+  /* Cores */
+  --color-primary: #1c1c22;
+  --color-accent: #ff00cc;
+  --color-accent-hover: #e600b8;
+
+  /* Fontes */
+  --font-primary: var(--font-jetbrainsMono);
+}
+
+/* Aplicações */
+@layer base {
+  body {
+    font-family: var(--font-primary), monospace;
+    background-color: var(--color-primary);
+    color: white;
+    line-height: 1.75;
+  }
+}
+
+/* Reset/ajuste básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Keyframes personalizados */
+@keyframes accordion-down {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+  }
+}
+
+@keyframes accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+  to {
+    height: 0;
+  }
+}
+
+/* Animações personalizadas com utilitários */
+@layer utilities {
+  .animate-accordion-down {
+    animation: accordion-down 0.2s ease-out;
+  }
+
+  .animate-accordion-up {
+    animation: accordion-up 0.2s ease-out;
+  }
+
+  /* ✅ Cores personalizadas */
+  .text-accent {
+    color: var(--color-accent);
+  }
+
+  .text-accent-hover:hover {
+    color: var(--color-accent-hover);
+  }
+
+  .bg-accent {
+    background-color: var(--color-accent);
+  }
+
+  .bg-accent-hover:hover {
+    background-color: var(--color-accent-hover);
+  }
+}
+
