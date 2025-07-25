@@ -9,22 +9,19 @@
 :root {
   --container-padding: 15px;
 
-  /* Telas (screens) */
   --screen-sm: 640px;
   --screen-md: 768px;
   --screen-lg: 960px;
   --screen-xl: 1200px;
 
-  /* Cores */
   --color-primary: #1c1c22;
   --color-accent: #ff00cc;
   --color-accent-hover: #e600b8;
 
-  /* Fontes */
   --font-primary: var(--font-jetbrainsMono);
 }
 
-/* Aplicações */
+/* Base */
 @layer base {
   body {
     font-family: var(--font-primary), monospace;
@@ -34,14 +31,74 @@
   }
 }
 
-/* Reset/ajuste básico */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+/* Utilitários */
+@layer utilities {
+  .animate-accordion-down {
+    animation: accordion-down 0.2s ease-out;
+  }
+
+  .animate-accordion-up {
+    animation: accordion-up 0.2s ease-out;
+  }
+
+  .text-accent {
+    color: var(--color-accent);
+  }
+
+  .text-accent-hover:hover {
+    color: var(--color-accent-hover);
+  }
+
+  .bg-accent {
+    background-color: var(--color-accent);
+  }
+
+  .bg-accent-hover:hover {
+    background-color: var(--color-accent-hover);
+  }
+
+  .hover\:text-accent:hover {
+    color: var(--color-accent);
+  }
 }
 
-/* Keyframes personalizados */
+
+/* Componentes */
+@layer components {
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--container-padding);
+    padding-right: var(--container-padding);
+  }
+
+  @media (min-width: 640px) {
+    .container {
+      max-width: var(--screen-sm);
+    }
+  }
+
+  @media (min-width: 768px) {
+    .container {
+      max-width: var(--screen-md);
+    }
+  }
+
+  @media (min-width: 960px) {
+    .container {
+      max-width: var(--screen-lg);
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .container {
+      max-width: var(--screen-xl);
+    }
+  }
+}
+
+/* Animações */
 @keyframes accordion-down {
   from {
     height: 0;
@@ -59,32 +116,3 @@
     height: 0;
   }
 }
-
-/* Animações personalizadas com utilitários */
-@layer utilities {
-  .animate-accordion-down {
-    animation: accordion-down 0.2s ease-out;
-  }
-
-  .animate-accordion-up {
-    animation: accordion-up 0.2s ease-out;
-  }
-
-  /* ✅ Cores personalizadas */
-  .text-accent {
-    color: var(--color-accent);
-  }
-
-  .text-accent-hover:hover {
-    color: var(--color-accent-hover);
-  }
-
-  .bg-accent {
-    background-color: var(--color-accent);
-  }
-
-  .bg-accent-hover:hover {
-    background-color: var(--color-accent-hover);
-  }
-}
-
