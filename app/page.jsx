@@ -4,6 +4,7 @@ import { FiDownload } from "react-icons/fi";
 // components
 import Social from "@/components/Social";
 import Photo from "@/components/Photo";
+import Stats from "@/components/Stats";
 
 const Home = () => {
   return (
@@ -26,9 +27,9 @@ const Home = () => {
                 <FiDownload className="text-xl"/>
               </Button>
               <div className="mb-8 xl:mb-0">
-                <Social 
-                  containerStyles="flex gap-6"
-                  iconStyles="w-9 h-9 border border-accent rounded-full flex justify-center items-center text-accent text-base hover:bg-accent hover:text-primary hover:transition-all duration-500"
+                <Social
+                  containerStyles="flex gap-x-6"
+                  iconStyles="w-9 h-9 border border-accent rounded-full flex justify-center items-center text-base transition-all duration-500 hover:bg-accent hover:text-primary text-accent"
                 />
               </div>
             </div>
@@ -39,6 +40,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <Stats />
     </section>
   )
 };
