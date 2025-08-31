@@ -7,33 +7,30 @@ import {
     FaReact,
     FaFigma,
     FaNodeJs,
+    FaJava,
 } from "react-icons/fa";
 
 import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
 
 //about data
 const about = {
-    title: "About me",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, ad libero impedit velit consequatur obcaecati nulla aut cum.",
+    title: "Sobre mim",
+    description: "Profissional formada em Matemática e Análise e Desenvolvimento de Sistemas, com experiência em implantação de sistemas mobile, desenvolvimento web e back-end, e atualmente cursando MBA em Engenharia de Software.",
     info: [
         {
-            fieldName: "Name",
+            fieldName: "Nome",
             fieldValue: "Joziane Oliveira"
         },
          {
-            fieldName: "Phone",
+            fieldName: "Telefone:",
             fieldValue: "+55 (34) 99808 1082"
         },
          {
-            fieldName: "Experience",
-            fieldValue: "+ 10 Years"
+            fieldName: "Experiência:",
+            fieldValue: "Gestão de processos e implantação de sistemas"
         },
          {
-            fieldName: "Skype",
-            fieldValue: "jozi.oliveira"
-        },
-         {
-            fieldName: "Nationality",
+            fieldName: "Nacionalidade",
             fieldValue: "Brasileira"
         },
          {
@@ -42,11 +39,11 @@ const about = {
         },
          {
             fieldName: "Freelance",
-            fieldValue: "Available"
+            fieldValue: "Disponível"
         },
          {
-            fieldName: "Languages",
-            fieldValue: "Portuguese, Spanish, English"
+            fieldName: "Idiomas",
+            fieldValue: "Português Nativo, Espanhol Avançado e Inglês Intermediário"
         },
     ]
 };
@@ -54,38 +51,28 @@ const about = {
 // experience data
 const experience = {
     icon: "/assets/resume/badge.svg",
-    title: "My experience",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, ad libero impedit velit consequatur obcaecati nulla aut cum.",
+    title: "Experiência profissional",
+    description: "Atuação em implantação de sistemas mobile, análise de processos e gestão de comunicação e educação.",
     items: [
         {
-            company: "Tech Solutions Inc.",
-            position: "Full Stack Developer",
-            duration: "2022 - Present",
+            company: "Realtec Solução em Gestão",
+            position: "Analista de Implantação Mobile",
+            duration: "12/2024 – Atual",
         },
         {
-            company: "Web Design Studio",
-            position: "Front-End Developer",
-            duration: "Summer 2021",
+            company: "Prefeitura Municipal de São Gotardo",
+            position: "Assessora de Comunicação",
+            duration: "10/2023 – 12/2024",
         },
         {
-            company: "E-commerce Startup",
-            position: "FreeLance Web Developer",
-            duration: "2020 - 2021",
+            company: "Prefeitura Municipal de São Gotardo",
+            position: "Instrutora e Técnica de Informática",
+            duration: "02/2022 – 09/2023",
         },
         {
-            company: "Tech Academy",
-            position: "Teaching Assistant",
-            duration: "2019 - 2020",
-        },
-        {
-            company: "Digital Agency",
-            position: "UI/UX Designer",
-            duration: "2018 - 2019",
-        },
-        {
-            company: "Software Development Firm",
-            position: "Junior Developer",
-            duration: "2017 - 2018",
+            company: "Estado de Minas Gerais",
+            position: "Professora de Matemática, física e português",
+            duration: "02/2022 – 12/2023",
         },
     ]
 };
@@ -93,18 +80,13 @@ const experience = {
 // education data
 const education = {
     icon: "/assets/resume/cap.svg",
-    title: "My education",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, ad libero impedit velit consequatur obcaecati nulla aut cum.",
+    title: "Formação Acadêmica",
+    description: "Formada em Matemática, Análise e Desenvolvimento de Sistemas, pós graduada em Engenharia de Software para dispositivos móveis, atualmente cursando MBA em Engenharia de Software.",
     items: [
-        {
-            institution: "Universidade de Uberaba - UNIUBE",
-            degree: "Licenciatura em Matemática",
-            duration: "2019 - 2023",
-        },
          {
-            institution: "Universidade de Uberaba - UNIUBE",
-            degree: "Análise e Desenvolvimento de Sistemas",
-            duration: "2020 - 2023",
+            institution: "Universidade de São Paulo - USP",
+            degree: "MBA Engenharia de Software",
+            duration: "05/2025 – 12/2026 (previsto)",
         },
          {
             institution: "Centro Universitário Internacional - UNINTER",
@@ -112,17 +94,22 @@ const education = {
             duration: "2023 - 2025",
         },
          {
-            institution: "Universidade de São Paulo - USP",
-            degree: "Engenharia de Software",
-            duration: "2025 - 2027",
+            institution: "Universidade de Uberaba - UNIUBE",
+            degree: "Análise e Desenvolvimento de Sistemas",
+            duration: "2020 - 2024",
         },
+        {
+            institution: "Universidade de Uberaba - UNIUBE",
+            degree: "Licenciatura em Matemática",
+            duration: "2019 - 2023",
+        },        
     ]
 };
 
 // skills data
 const skills = {
     title: "My skills",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, ad libero impedit velit consequatur obcaecati nulla aut cum.",
+    description: "Competências técnicas em desenvolvimento web, back-end e ferramentas complementares.",
     skillList: [
         {
             icon: <FaHtml5 />,
@@ -153,9 +140,9 @@ const skills = {
             name: "node.js",
         },
         {
-            icon: <FaFigma />,
-            name: "figma",
-        }
+            icon: <FaJava />,
+            name: "java",
+        },
     ]
 };
 
