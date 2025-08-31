@@ -11,17 +11,17 @@ import { FaPhoneAlt, FaEnvelope, FaMapMarkedAlt } from "react-icons/fa";
 const info = [
     {
         icon: <FaPhoneAlt />,
-        title: "Phone",
+        title: "Telefone:",
         description: "+55 (34) 99808-1082",
     },
     {
         icon: <FaEnvelope />,
-        title: "Email",
+        title: "Email:",
         description: "jozioliveira@edu.uniube.br",
     },
     {
         icon: <FaMapMarkedAlt />,
-        title: "Address",
+        title: "Localização:",
         description: "São Gotardo - MG / Brasil",
     },
 ]
@@ -38,34 +38,35 @@ const Contact = () => {
                     {/* form */}
                     <div className="xl:w-[54%] order-2 xl:order-none">
                         <form className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl">
-                            <h3 className="text-4xl text-accent">Let's work together!</h3>
+                            <h3 className="text-4xl text-accent">Vamos trabalhar juntos!</h3>
                             <p className="text-white/60">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, ipsam eaque! Fuga, assumenda architecto.</p>
                             {/* input */}
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6"> 
-                                <Input type="firstname" placeholder="Firstname"/>
-                                <Input type="lastname" placeholder="Lastname"/>
-                                <Input type="email" placeholder="Email Address"/>
-                                <Input type="phone" placeholder="Phone Number"/>
+                                <Input type="firstname" placeholder="Nome"/>
+                                <Input type="lastname" placeholder="Sobrenome"/>
+                                <Input type="email" placeholder="Email"/>
+                                <Input type="phone" placeholder="Telefone"/>
                             </div>
                             {/* select */}
                             <Select>
                                 <SelectTrigger className="w-full">
-                                    <SelectValue placeholder="Select a service"/>
+                                    <SelectValue placeholder="Selecione um serviço:"/>
                                 </SelectTrigger>
                                 <SelectContent>
                                     <SelectGroup>
-                                        <SelectLabel>Select a service</SelectLabel>
-                                        <SelectItem value="est">Web Development</SelectItem>
-                                        <SelectItem value="cst">UI/UX Design</SelectItem>
-                                        <SelectItem value="mst">Logo Design</SelectItem>
+                                        <SelectLabel>Selecione um serviço:</SelectLabel>
+                                        <SelectItem value="desenvolvimento web">Desenvolvimento Web</SelectItem>
+                                        <SelectItem value="aplicacoes mobile">Aplicações Mobile</SelectItem>
+                                        <SelectItem value="back end api">Back-end & APIs</SelectItem>
+                                        <SelectItem value="matematica">Aulas de Matemática</SelectItem>
                                     </SelectGroup>
                                 </SelectContent>
                             </Select>
                             {/* textarea */}
-                            <Textarea className="h-[200px]" placeholder="Type your message here."/>
+                            <Textarea className="h-[200px]" placeholder="Escreva sua mensagem aqui."/>
                             {/* btn */}
                             <Button size="md" className="max-w-40"> 
-                                Send message
+                                Enviar mensagem
                             </Button>
                         </form>
                     </div>
