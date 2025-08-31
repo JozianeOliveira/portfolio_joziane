@@ -24,8 +24,8 @@ const stats = [
         text: "Formações acadêmicas",
     },
     {
-        num: 5,
-        text: "Anos de experiência prática",
+        num: 3,
+        text: "Anos de experiência",
     },
 ];
 
