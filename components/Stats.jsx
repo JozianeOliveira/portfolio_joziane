@@ -4,20 +4,28 @@ import CountUp from "react-countup";
 
 const stats = [
     {
-        num: 12,
-        text: "Years of experience",
+        num: 28,
+        text: "Repositórios GitHub",
     },
     {
-        num: 26,
-        text: "Projects completed",
+        num: 516,
+        text: "Commits realizados",
+    },
+    {
+        num: 12,
+        text: "Cursos e certificações",
     },
     {
         num: 8,
-        text: "Technologies mastered",
+        text: "Tecnologias dominadas",
     },
     {
-        num: 500,
-        text: "Code commits",
+        num: 4,
+        text: "Formações acadêmicas",
+    },
+    {
+        num: 5,
+        text: "Anos de experiência prática",
     },
 ];
 
