@@ -16,34 +16,74 @@ import WorkSliderBtns from "@/components/WorkSliderBtns";
 
 const projects = [
     {
+        num: "00",
+        category: "portfolio",
+        title: "Portfólio Pessoal",
+        description: "Meu site pessoal desenvolvido com Next.js, Tailwind e Framer Motion — mostra minhas habilidades e projetos.",
+        stack: [{ name: "Next.js"}, { name: "Tailwind CSS"}, { name: "Framer Motion"}, { name: "Nodemailer"}],
+        image: "/assets/work/Curriculo.png",
+        live: "https://portfolio-joziane.vercel.app/",
+        github: "https://github.com/JozianeOliveira/portfolio_joziane",
+    },
+    {
         num: "01",
-        category: "frontend",
-        title: "project 01",
-        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia enim aspernatur ducimus omnis hic distinctio deleniti.",
-        stack: [{ name: "Html 5"}, { name: "Css 3"}, { name: "JavaScript"}],
-        image: "/assets/work/projeto.png",
+        category: "backend",
+        title: "Página de Jogos (PHP + MySQL)",
+        description: "Projeto de backend em PHP com MySQL para cadastro e listagem de jogos. Permite inserir, editar e visualizar jogos via interface web básica.",
+        stack: [{ name: "PHP"}, { name: "MySQL"}, { name: "HTML"}, { name: "CSS"}],
+        image: "/assets/work/Jogos.jpg",
         live: "",
-        github: "",
+        github: "https://github.com/JozianeOliveira/PaginaJogosPHPMySQL",
     },
     {
         num: "02",
-        category: "fullstack",
-        title: "project 02",
-        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia enim aspernatur ducimus omnis hic distinctio deleniti.",
-        stack: [{ name: "Next.js"}, { name: "Tailwind.css"}, { name: "Node.js"}],
-        image: "/assets/work/projeto.png",
+        category: "backend",
+        title: "Fábrica de Automóveis",
+        description: "Projeto em Java com POO para automatizar o cadastro e controle de carros e motos em uma fábrica de veículos. Inclui classes como Automovel, Carro e Moto, métodos para ligar, mover e parar veículos, além de funcionalidades específicas como teto solar e freio ABS.",
+        stack: [{ name: "Java"}, { name: "POO"}, { name: "NetBeans"}],
+        image: "/assets/work/Automoveis.jpg",
         live: "",
-        github: "",
+        github: "https://github.com/JozianeOliveira/fabricaAuto",
     },
     {
         num: "03",
-        category: "frontend",
-        title: "project 03",
-        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia enim aspernatur ducimus omnis hic distinctio deleniti.",
-        stack: [{ name: "Next.js"}, { name: "Tailwind.css"}],
-        image: "/assets/work/projeto.png",
+        category: "backend",
+        title: "Controle de Pedidos para Lanchonete",
+        description: "Sistema em Python para gestão de pedidos de lanchonete. Permite selecionar lanches, acompanhamentos e bebidas, calcular totais e controlar vendas.",
+        stack: [{ name: "Python"}, { name: "Console App"}],
+        image: "/assets/work/Lanchonete.jpg",
         live: "",
-        github: "",
+        github: "https://github.com/JozianeOliveira/ControlePedidosLanchonete",
+    },
+    {
+        num: "04",
+        category: "frontend",
+        title: "PrimeFlix",
+        description: "Aplicativo em React que lista filmes da TMDb, exibe detalhes e permite salvar favoritos localmente com interface intuitiva e notificações.",
+        stack: [{ name: "React"}, { name: "React Router"}, { name: "Axious"}, { name: "React Toastify"}, { name: "TMDb API"}],
+        image: "/assets/work/PrimeFlix.png",
+        live: "https://prime-flix-483v.vercel.app/",
+        github: "https://github.com/JozianeOliveira/PrimeFlix",
+    },
+    {
+        num: "05",
+        category: "frontend",
+        title: "Tela de Login Responsiva",
+        description: "Página de login em HTML/CSS, idealizada com abordagem mobile-first, validação de campos, design moderno e adaptabilidade a diferentes telas.",
+        stack: [{ name: "HTML5"}, { name: "CSS3"}, { name: "Responsividade"}],
+        image: "/assets/work/Login.jpg",
+        live: "https://jozianeoliveira.github.io/Login/",
+        github: "https://github.com/JozianeOliveira/Login",
+    },
+    {
+        num: "06",
+        category: "lógica de programação",
+        title: "Exercícios em Portugol",
+        description: "Conjunto de exercícios em Portugol Studio para consolidar lógica de programação: condicionais, loops, vetores, matrizes e funções.",
+        stack: [{ name: "Portugol Studio"}, { name: "Lógica de Programação"}],
+        image: "/assets/work/Log_prog.jpg",
+        live: "",
+        github: "https://github.com/JozianeOliveira/Portugol",
     },
 ];
 
@@ -67,9 +107,13 @@ const Work = () => {
                             <div className="text-8xl leading-none font-extrabold text-transparent text-outline">{project.num}</div>
                         </div>
                         {/*project category */}
-                        <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">{project.category} project</h2>
+                        <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">Projeto {project.category}</h2>
+                        {/* Title */}
+                        <p className="text-lg italic text-accent font-medium">
+                        {project.title}
+                        </p>
                         {/* project description */}
-                        <p>{project.description}</p>
+                        <p>{project.description}</p>                        
                         {/* stack */}
                         <ul className="flex gap-4">
                             {project.stack.map((item, index) => {
@@ -85,31 +129,35 @@ const Work = () => {
                         {/* buttons */}
                         <div className="flex items-center gap-4">
                             {/* live project button */}
-                            <Link href={project.live}>
-                                <TooltipProvider delayDuration={100}>
-                                    <Tooltip>
-                                        <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
-                                            <BsArrowUpRight className="text-white text-3xl group-hover:text-accent"/>
-                                        </TooltipTrigger>
-                                        <TooltipContent>
-                                            <p>Live project</p>
-                                        </TooltipContent>
-                                    </Tooltip>
-                                </TooltipProvider>
-                            </Link>
+                            {project.live && (
+                                <Link href={project.live} target="_blank">
+                                    <TooltipProvider delayDuration={100}>
+                                        <Tooltip>
+                                            <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
+                                                <BsArrowUpRight className="text-white text-3xl group-hover:text-accent"/>
+                                            </TooltipTrigger>
+                                            <TooltipContent>
+                                                <p>Live project</p>
+                                            </TooltipContent>
+                                        </Tooltip>
+                                    </TooltipProvider>
+                                </Link>
+                            )}
                             {/* github project button */}
-                            <Link href={project.github}>
-                                <TooltipProvider delayDuration={100}>
-                                    <Tooltip>
-                                        <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
-                                            <BsGithub className="text-white text-3xl group-hover:text-accent"/>
-                                        </TooltipTrigger>
-                                        <TooltipContent>
-                                            <p>Github project</p>
-                                        </TooltipContent>
-                                    </Tooltip>
-                                </TooltipProvider>
-                            </Link>
+                            {project.github && (
+                                <Link href={project.github} target="_blank">
+                                    <TooltipProvider delayDuration={100}>
+                                        <Tooltip>
+                                            <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
+                                                <BsGithub className="text-white text-3xl group-hover:text-accent"/>
+                                            </TooltipTrigger>
+                                            <TooltipContent>
+                                                <p>Github project</p>
+                                            </TooltipContent>
+                                        </Tooltip>
+                                    </TooltipProvider>
+                                </Link>
+                            )}
                         </div>
                     </div>
                     <div className="w-full xl:w-[50%]">
