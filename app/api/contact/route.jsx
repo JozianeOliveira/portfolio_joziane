@@ -20,11 +20,21 @@ export async function POST(request) {
       },
     });
 
+  
     const mailOptions = {
-      from: `"${firstname} ${lastname}" <${email}>`,
+      from: process.env.EMAIL_USER, 
+      replyTo: email, 
       to: process.env.EMAIL_RECEIVER || "jozioliveira@edu.uniube.br",
       subject: `Contato - ${service}`,
-      text: `Nome: ${firstname} ${lastname}\nEmail: ${email}\nTelefone: ${phone}\n\nMensagem:\n${message}`,
+      text: `
+        Nome: ${firstname} ${lastname}
+        Email: ${email}
+        Telefone: ${phone}
+        Serviço: ${service}
+
+        Mensagem:
+        ${message}
+      `,
     };
 
     await transporter.sendMail(mailOptions);
